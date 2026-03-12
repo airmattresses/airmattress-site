@@ -751,6 +751,13 @@
     })(window, document, "clarity", "script", "vr25txs5b3");
 </script>
 </head>
+<script>
+  var branch = document.cookie.split('; ').find(function(c) {
+    return c.startsWith('nf_ab=');
+  });
+  var variant = branch ? branch.split('=')[1] : 'unknown';
+  clarity("set", "variant", variant);
+</script>
 <body>
 
 <!-- STICKY CTA BAR -->
